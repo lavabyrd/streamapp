@@ -25,16 +25,11 @@ def streamstart():
             outstream = json.loads(line)
             if outstream.has_key('text'):
                 t = outstream['text']
-                f.write(t + '\n')
-            # f.write(outstream['text'] + '\n')
-        #     if outstream.has_key('text'):
-        #         txt = outstream['text'].lower()
-        #     #     # this will check the tweet body for the text "trump" after converting it
-        #     #     # to lower and print it to the console if it exists
-        #         if "trump" in txt:
-        #             f.write(txt + '\n')
-                    # print outstream['text']
-            # checkoutput()
+                # Uncomment the below line to allow writing of the stream to the file. However this will fill quite quickly
+                # f.write(t + '\n')
+                    # if "#work" in txt:
+                    #     f.write(txt + '\n')
+
 
 
 def checkoutput():

@@ -16,7 +16,7 @@ def home():
 
 @app.route('/start', methods=['GET'])
 def start():
-    t.start()
+    # t.start()
     return "starting stream"
 
 # At present this isn't working as you cannot just stop the thread and restart
@@ -24,7 +24,7 @@ def start():
 
 @app.route('/stop', methods=['GET'])
 def stop():
-    t.stop()
+    # t.stop()
 
 
 # Takes the stream and assigns it to its own thread
