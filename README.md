@@ -8,10 +8,13 @@
   2. Download and install Pip for installing python packages. Details on doing this can be found at http://sharadchhetri.com/2014/05/30/install-pip-centos-rhel-ubuntu-debian/
   3. Navigate into the directory and install the requirements by using `pip install -r requirements.txt`.
   4. Add your twitter keys to the `settings.py` file. These can be obtained from https://apps.twitter.com.
-  5. Text run the application by using `python app.py`.
+  5. Test run the application by using `python app.py`.
+  6. Edit the file path in `streamer.conf` to match the location of `/home/username`.
+  7. Copy this file to `/etc/init` and reload your init files. This can generally be done by using something like `initctl reload-configuration`.
+  8. You should be able to start the service using `service streamer start` and stop it using `service streamer stop`.
 
 
-Example API calls can be found the following end points: `/start` and `/stop`. 
+Example API calls can be found the following end points: `/start` and `/stop`.
 
 
 **Future work:**
@@ -23,4 +26,4 @@ if "#work" in txt:
   f.write(txt + '\n')
 ```
 
-This will check the current stream and only print those that match the text `#work` to the file. This should have spawned in a seperate thread at the project end after an API call taking an argument from the API call as the keyword to search for and using it to name the file. This could be done by using a simple variable name and assigning it based on the keyword. This could have been started and stopped through API called to `thread.start()` and `thread.stop()`. This has a limitation in that the thread could not be started again however. Pausing may need to be investigated instead.
+This will check the current stream and only print those that match the text `#work` to the file. This should have spawned in a separate thread at the project end after an API call taking an argument from the API call as the keyword to search for and using it to name the file. This could be done by using a simple variable name and assigning it based on the keyword. This could have been started and stopped through API called to `thread.start()` and `thread.stop()`. This has a limitation in that the thread could not be started again however. Pausing may need to be investigated instead.
