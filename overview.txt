@@ -1,0 +1,13 @@
+Ruby developer test
+
+
+
+
+
+The following exercise is meant to assess the ability to provide and consume web API from a ruby application. A successful candidate has to produce an artefact that can be distributed, tested and consumed by third parties and fulfil the following functional requirements:
+
+•	The software has to run as a Linux daemon (RedHat / Centos)
+•	The software exposes a ReST API which tells the process to consumer a certain hashtag on Twitter.  ( GET/consumer/HASHTAG/start, GET /consumer/HASHTAG/status, GET /consumer/HASHTAG/stop)
+•	For each hashtag being followed the daemons appends in realtime the content of the post to a file. Each hashtag will be dumped in it’s own file.
+•	The daemon will talk to Twitter Streaming API, no external libraries are allowed.
+•	The software should avoid blocking calls.
